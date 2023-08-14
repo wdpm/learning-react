@@ -4,6 +4,7 @@ import { Checkbox } from "./Checkbox";
 
 test("Selecting the checkbox should toggle its value", () => {
   const { getByLabelText } = render(<Checkbox />);
+  //const checkbox = getByTestId("checkbox");
   const checkbox = getByLabelText(/not checked/i);
   fireEvent.click(checkbox);
   expect(checkbox.checked).toEqual(true);

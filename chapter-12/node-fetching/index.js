@@ -1,4 +1,5 @@
 const fetch = require("node-fetch");
+//const fetch = require("isomorphic-fetch")
 
 const userDetails = response => {
   const login = response.login;

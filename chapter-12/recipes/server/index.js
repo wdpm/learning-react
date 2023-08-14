@@ -12,6 +12,7 @@ const app = express();
 app.use(express.static("./build"));
 
 app.get("/*", (req, res) => {
+  // React 预渲染
   const app = ReactDOMServer.renderToString(
     <Menu />
   );
@@ -20,6 +21,7 @@ app.get("/*", (req, res) => {
     "./build/index.html"
   );
 
+  // html string merge
   fs.readFile(indexFile, "utf8", (err, data) => {
     return res.send(
       data.replace(
@@ -28,6 +30,8 @@ app.get("/*", (req, res) => {
       )
     );
   });
+
+  console.log('hello')
 });
 
 app.listen(PORT, () =>

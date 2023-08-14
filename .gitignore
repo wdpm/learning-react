@@ -2,6 +2,8 @@
 .DS_Store
 .idea/
 
+/**/*/node_modules
+
 jest
 
 chapter-12/color-organizer/dist/

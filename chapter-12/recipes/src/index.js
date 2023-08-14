@@ -84,6 +84,11 @@ const data = [
   }
 ];
 
+// hydrate() NOT render()
+// 1. Render a static version of the app, allowing users to see that something has happened and the page has “loaded.”
+// 2. Make the request for the dynamic JavaScript.
+// 3. Replace the static content with the dynamic content.
+// 4. User clicks on something and it works
 ReactDOM.hydrate(
   <Menu
     recipes={data}
